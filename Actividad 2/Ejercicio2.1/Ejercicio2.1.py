@@ -1,10 +1,22 @@
-a = float(input("Ingrese el primer número: "))
-b = float(input("Ingrese el segundo número: "))
-c = float(input("Ingrese el tercer número: "))
+class Persona:
+    def __init__(self, nombre, apellidos, numero_documento_identidad, anio_nacimiento):
+        self.nombre = nombre
+        self.apellidos = apellidos
+        self.numero_documento_identidad = numero_documento_identidad
+        self.anio_nacimiento = anio_nacimiento
 
-if a > b and a > c:
-    print("El mayor número es:", a)
-elif b > c:
-    print("El mayor número es:", b)
-else:
-    print("El mayor número es:", c)
+    def imprimir(self):
+        print("Nombre =", self.nombre)
+        print("Apellidos =", self.apellidos)
+        print("Número de documento de identidad =", self.numero_documento_identidad)
+        print("Año de nacimiento =", self.anio_nacimiento)
+        print()
+
+
+# Método main
+if __name__ == "__main__":
+    p1 = Persona("Pedro", "Pérez", "1053121010", 1998)
+    p2 = Persona("Luis", "León", "1053223344", 2001)
+
+    p1.imprimir()
+    p2.imprimir()
